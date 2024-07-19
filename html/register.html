@@ -1,0 +1,139 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name= "viewport" content= "width=device-width", initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+      <script src="../js/register.js"></script>
+      <script src="https://kit.fontawesome.com/cc3cdcd96a.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="../css/forms.css">
+      <link rel="stylesheet" href="../css/styles.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+     
+      <title>Gurkha JQuery Register </title>
+
+    </head>
+    <body>
+      <section id="header">
+        <a href="../index.html"
+          ><img src="../images/fogo.png" class="logo" alt="logo of the company"
+        /></a>
+        <div>
+          <ul id="navbar">
+            <li><a href="../index.html"><h1>Gurkha Gears </h1></a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a  class="active" href="register.html">Register</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <form id="registration-form" action="../php/register.php" method="post">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name" required ><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Your Last Name Here"><br>
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" rows="4" placeholder="eg: 25 land xettra" required></input>
+        <label for="postal">Postal Code:</label>
+        <input type="text" id="postal" name="postal" rows="4"  placeholder="eg:M1W 45D" required></input>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" placeholder="+977 984-8830 987" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com"  required><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" minlength="6" maxlength="60" placeholder="eg: Cutiegirl" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8"><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br>
+        <input type="submit" value="Register">
+        
+
+
+
+      </form>
+        <div id="login">
+          <h4>Have an account? <a href="../html/login.html"><button>Login now</button></a></h4>
+    
+        </div>
+
+
+      </body>
+      </html>
+      
+
+
+      <footer class="section-p1">
+        <div class="col">
+          <img class="logo" src="../images/fogo.png" alt="logo" />
+          <h3>Contact</h3>
+          <p>
+            <strong>Address:</strong> Swyambhu Circle Road,Kathmandu 44600,Nepal
+          </p>
+          <p><strong>Phone:</strong> +977 986-922 4554</p>
+          <p><strong>Hours:</strong> 9:00 - 18:00, Sun - Sat</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fab fa-twitter-f"></i>
+              <i class="fab fa-pinterest-p"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+          <h4>My Account</h4>
+          <a href="login.html">Sign In</a>
+          <a href="contact.html">Help</a>
+        </div>
+
+        <div class="col install">
+          <h4>Install App</h4>
+          <p>from App Store or Google play</p>
+          <div class="row">
+            <a href="https://www.apple.com/ca/app-store/" target="_blank">
+              <img src="../images/app.jpg" alt="appstore" />
+            </a>
+            <a
+              href="https://play.google.com/store/games?hl=en&gl=US"
+              target="_blank"
+            >
+              <img src="../images/play.png" alt="playstore" />
+            </a>
+          </div>
+          <p>Secured Payment Gateways</p>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2024 Gurkha Gears. All rights reserved.</p>
+        </div>
+      </footer>
+    </body>
+  </html>
