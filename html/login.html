@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurkha JQuery Login</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/cc3cdcd96a.js"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      /* Override Smoothness theme colors */
+      .ui-widget-header {
+        background: #5c5c5c; /* Dark gray background for headers */
+        color: #ffffff; /* White text color for headers */
+      }
+      .ui-state-default,
+      .ui-widget-content .ui-state-default,
+      .ui-widget-header .ui-state-default {
+        background: #ff6f61; /* Red background for default states */
+        border: 1px solid #d66559; /* Darker red border */
+        color: #ffffff; /* White text color for default states */
+      }
+      .ui-state-default a,
+      .ui-state-default a:link,
+      .ui-state-default a:visited {
+        color: #ffffff; /* White text color for links in default states */
+      }
+      .ui-state-default a:hover,
+      .ui-state-default a:active {
+        color: #f2f2f2; /* Lighter text color for hovered/active links */
+      }
+      /* Global styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+      }
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .login-container {
+        position: relative;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        text-align: center;
+      }
+      .login-container h2 {
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .login-container button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background: #4caf50;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .login-container button:hover {
+        background: #45a049;
+      }
+    </style>
+  </head>
+  <body class="ui-smoothness">
+    <section id="header">
+      <a href="../index.html">
+        <img src="../images/fogo.png" class="logo" alt="logo of the company" />
+      </a>
+      <div>
+        <ul id="navbar">
+          <li>
+            <a href="../index.html"><h1>Gurkha Gears</h1></a>
+          </li>
+          <li><a class="active" href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="particles-js"></div>
+
+    <div class="login-container">
+      <form id="login-form" action="../php/login.php" method="post">
+        <label for="username_or_email">Username/Email:</label>
+        <input
+          type="text"
+          id="username_or_email"
+          name="username_or_email"
+          placeholder="Username or Email"
+          minlength="6"
+          maxlength="60"
+          required
+        /><br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          minlength="8"
+          required
+        /><br />
+
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="../images/fogo.png" alt="logo" />
+        <h3>Contact</h3>
+        <p>
+          <strong>Address:</strong> Swyambhu Circle Road, Kathmandu 44600, Nepal
+        </p>
+        <p><strong>Phone:</strong> +977 986-922 4554</p>
+        <p><strong>Hours:</strong> 9:00 - 18:00, Sun - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fab fa-twitter-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="login.html">Sign In</a>
+        <a href="contact.html">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>from App Store or Google play</p>
+        <div class="row">
+          <a href="https://www.apple.com/ca/app-store/" target="_blank">
+            <img src="../images/app.jpg" alt="appstore" />
+          </a>
+          <a
+            href="https://play.google.com/store/games?hl=en&gl=US"
+            target="_blank"
+          >
+            <img src="../images/play.png" alt="playstore" />
+          </a>
+        </div>
+        <p>Secured Payment Gateways</p>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Gurkha Gears. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!--particles js library-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 100,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable_auto: true,
+            distance: 100,
+            color: "#ffffff",
+            opacity: 1,
+            width: 1,
+            condensed_mode: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 600,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "grab",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 200,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 200,
+              size: 80,
+              duration: 0.4,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
+</html>
