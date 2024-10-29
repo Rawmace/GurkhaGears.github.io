@@ -41,10 +41,13 @@
           </li>
           <li>
             <a href="html/cart.html">
-              <i class="fa-solid fa-cart-shopping"></i> CART</a
-            >
+              <i class="fa-solid fa-cart-shopping"></i> CART
+            </a>
           </li>
         </ul>
+      </div>
+      <div id="mobile">
+        <i id="bar" class="fas fa-bars"></i>
       </div>
     </section>
 
@@ -101,6 +104,21 @@
           autoplay: true, // Enable autoplay
           autoplaySpeed: 1000, // Set autoplay speed in milliseconds (e.g., 2000 for 2 seconds)
         });
+      });
+      const bar = document.getElementById("bar");
+      const navbar = document.getElementById("navbar");
+
+      if (bar) {
+        bar.addEventListener("click", () => {
+          navbar.classList.add("active");
+        });
+      }
+
+      // Close the menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && !bar.contains(e.target)) {
+          navbar.classList.remove("active");
+        }
       });
     </script>
     <!-- ---use of plugin for autoplay of images  -->
